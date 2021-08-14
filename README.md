@@ -26,4 +26,9 @@ Each folder contains two other folders:
       *Weight: ?? (0-99F)*\
       *Temp: ?? (20-80C)*
    * In the project, call the above paragraphs in order.
-
+3. LCD, Interrupts, Timers
+   * Write the timer subroutine with an accuracy of 0.01 seconds to start counting by pressing the start key and stop by pressing stop key. If the stop is made again after stopping, the time will be zero. And the time is displayed on the first line of the LCD. (*Hint: Call the timer routine in the program interrupt routine.*)
+   * Consider parking where the parking manager presses the IN_CAR key as soon as the car enters and the OUT_CAR key as soon as car leaves, and the parking capacity is displayed on the LCD. Write a sub-program that shows the empty parking capacity on the second LCD line. (*Hint: Consider the following assumptions: Empty capacity: 1000 machines (1000: CE)
+Display FULL after filling in: (FULL: CE ) IN_CAR and OUT_CAR keys are connected to external interrupts.*)
+   * Write a subroutine that forms a square waveform at the timer output (OC1B / PD4) and
+(OC1A / PD5). Take the input frequency from the switches connected to the micro and display the frequency and error percentage on the LCD. Consider the frequency range from 1 microsecond to 10 milliseconds. (*Hint: error rate maximum 9 percent Example 50US3 means 50 microseconds and the error rate is 3, or 24MS1 means 24 microseconds and the error percentage is 1. Due to the Proteus constraint, only 8 MHz and 1 MHz are used. Show.*)
